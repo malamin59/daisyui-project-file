@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  data-theme="light" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +11,34 @@
     <!--  Daisyui link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         .font-poppins{
             font-family: "Poppins", serif;
             color: black;
         }
     </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'bike-primary': '#E76F51',
+                'bike-primary-bg': 'rgba(231, 111, 81, 0.1)',
+                
+              },
+            },
+          },
+        }
+      </script>
 </head>
-<body date-theme="light" class="bg-white min-h-screen font-poppins colur">
+<body>
 <!-- Header section  -->
-<header>
+<header class="md:container mx-auto">
 <nav >
     <div class="navbar bg-base-1000">
-        <div class="navbar-start">
+        <div class="flex-1">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg
@@ -51,7 +66,7 @@
               <li><a>Contact</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">Biker zone</a>
+          <a class="font-bold text-xl">Biker zone</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -64,18 +79,77 @@
             <li><a>Contact</a></li>
           </ul>
         </div>
-        <div class="navbar-end">
-          <a class="btn btn-error">login</a>
+        <div class="">
+          <a class="btn  bg-bike-primary text-white px-8">login</a>
         </div>
       </div>
 </nav>
 
+<!-- Slider carousel -->
+
+<div class="carousel w-full h-[560px] bg-bike-primary-bg">
 
 
+
+
+
+    <div id="slide2" class="carousel-item relative w-full">
+    <div class="flex flex-col lg:flex-row p-24 ">
+        <!-- text content -->
+        <div class="space-y-7 flex-1">
+             <h1 class=" lg:text-6xl font-bold">
+            Ride-on R15 V4 <br>with Smile
+        </h1>
+        <p>Amet minim mollit non deserunt ullamco 
+            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <button class="btn bg-bike-primary text-white"> Purchase</button>
+     </div>
+        <!-- img content -->
+         <div class="flex-1">
+            <img
+            src="images/slider/bike2.png" cass="w-full"
+            class="w-full " />
+         </div>
+    </div>
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide1" class="btn btn-circle">❮</a>
+        <a href="#slide3" class="btn btn-circle">❯</a> 
+      </div>
+    </div>
+    <div id="slide2" class="carousel-item relative w-full">
+      <div class="flex flex-col lg:flex-row p-24 ">
+          <!-- text content -->
+          <div class="space-y-7 flex-1">
+               <h1 class=" lg:text-6xl font-bold">
+              Ride-on R15 V4 <br>with Smile
+          </h1>
+          <p>Amet minim mollit non deserunt ullamco 
+              est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+              <button class="btn bg-bike-primary text-white"> Purchase</button>
+       </div>
+          <!-- img content -->
+           <div class="flex-1">
+              <img
+              src="images/slider/bike2.png" cass="w-full"
+              class="w-full " />
+           </div>
+      </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+  
+
+
+
+
+
+  </div>
 </header>
 
 <!-- main section  -->
- <main></main>
+ <main class="md:container mx-auto"></main>
  <!-- footer section  -->
   <footer></footer>
 
